@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NR Studio Photography & Videography</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background: black;
+      color: white;
+      overflow-x: hidden; /* prevents side-scroll */
+    }
+    header {
+      position: relative;
+      height: calc(var(--vh,1vh) * 100);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background-image: url('static/images/cam1.jpg'); /* your image */
+      background-size: cover;
+      background-position: center;
+    }
+    header .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+    header h1 {
+      font-size: 4rem;
+      animation: fadeInUp 2s ease forwards;
+      z-index: 2;
+    }
+    header p {
+      margin-top: 1rem;
+      font-size: 1.5rem;
+      color: #ccc;
+      animation: fadeInUp 3s ease forwards;
+      z-index: 2;
+    }
+    .btn {
+      margin-top: 2rem;
+      padding: 12px 24px;
+      font-size: 1.2rem;
+      background: crimson;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+      animation: fadeInUp 4s ease forwards;
+      z-index: 2;
+      position: relative;
+    }
+    .btn:hover {
+      background: darkred;
+    }
+    section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+    section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+    .services {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .glow-text {
+      font-size: 4rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      color: #fff;
+      text-shadow: 0 0 10px #ff0000, 
+                   0 0 20px #ff0000, 
+                   0 0 40px #ff0000;
+      animation: glowPulse 2s infinite alternate;
+    }
+    @keyframes glowPulse {
+      from {
+        text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000, 0 0 20px #ff0000;
+      }
+      to {
+        text-shadow: 0 0 20px #ff4d4d, 0 0 40px #ff1a1a, 0 0 60px #ff0000;
+      }
+    }
+    .card {
+      background: #1f1e1e;
+      padding: 20px;
+      border-radius: 12px;
+      width: 300px;
+      transition: transform 0.3s;
+    }
+    .card:hover {
+      transform: scale(1.05);
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    footer {
+      padding: 20px;
+      background: #3a3737;
+      color: #aaa;
+      text-align: center;
+    }
+
+    /* ✅ Responsive design */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      header p {
+        font-size: 1rem;
+      }
+      .btn {
+        font-size: 1rem;
+        padding: 10px 18px;
+      }
+      .services {
+        flex-direction: column;
+        align-items: center;
+      }
+      .card {
+        width: 90%;
+      }
+    }
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 1.5rem;
+      }
+      header p {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Hero Section -->
+  <header>
+    <div class="overlay"></div>
+    <div class="hero-text">
+      <h1 class="glow-text">NR Studio Photography & Videography</h1>
+      <p>Capturing your moments with elegance</p>
+      <a href="https://www.instagram.com/nrstudio765?igsh=MzczMWZoZnVsZmF3">
+        <button class="btn">Book Now</button>
+      </a>
+    </div>
+  </header>
+
+  <!-- Services -->
+  <section>
+    <h2><b>OUR SERVICES</b></h2>
+    <div class="services">
+      <div class="card">
+        <h3><u>Event Coverage</u></h3>
+        <p>Professional cinematic coverage for weddings, parties, and events.</p>
+      </div>
+      <div class="card">
+        <h3><u>Ad Films</u></h3>
+        <p>High-quality commercial videography for brands and businesses.</p>
+      </div>
+      <div class="card">
+        <h3><u>Music Videos</u></h3>
+        <p>Creative direction and cinematic visuals for artists and musicians.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section>
+    <h2><b>ABOUT US</b></h2>
+    <p>We are storytellers passionate about creating cinematic experiences.</p>
+    <p>With years of expertise, we capture memories that last forever.</p>
+  </section>
+
+  <!-- Packages -->
+  <section>
+    <h2>PACKAGES :</h2>
+    <p>All Types of Albums</p>
+    <p>All Types of Videography</p>
+    <p>All Types of Photography</p>
+  </section>
+
+  <!-- Contact -->
+  <section>
+    <h2>CONTACT US:</h2>
+    <p>Email: nrstudio7786@gmail.com | Phone: ‪+91 91825 25677‬</p>
+  </section>
+
+  <footer>
+    © 2017 NR Studio Photography & Videography Shop. All rights reserved.
+  </footer>
+</body>
+</html>
